@@ -20,7 +20,7 @@
     
     $ironman .= '& camptain';
 
-    echo '<a href="demo.php/' . rawurldecode($ironman) .'">' . htmlentities($ironman) . '</a>';
+    echo '<a href="demo.php/' . rawurlencode($ironman) .'">' . htmlentities($ironman) . '</a>';
 
     $submit_data = 'Hi!Tony?➥ I\'m Hulk.➥ Are u kindding me?➥ I am not kindding';
 
@@ -49,18 +49,8 @@ EOD;
     $word = 'Captain';
     echo str_replace($word,'<i>Captain Amercian</i>',$str2);
 echo "<hr/>";
-    function addTag($text, $word, $tag)
-    {
-      $length = strlen($word);
-      $start  = strpos($text, $word);
-      $word   = '<' . $tag . '>' . $word . '</' . $tag . '>';
-      return substr_replace($text, $word, $start, $length);
-    }
-    $text = <<<EOD
-PHP (recursive acronym for "PHP: Hypertext Preprocessor")
- is a widely used Open Source general-purpose scripting language.
-EOD;
-    echo addTag($text, 'general-purpose', 'i');
+    
+    printf("%s cost %'.4d","Apple",2.11212);
     
 
 ?>
