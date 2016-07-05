@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('PRC');
+
 $str = <<<EOD
 <style>
 strong{ color:red; }
@@ -54,7 +56,9 @@ foreach ($hfile as $k => $v){
 
 
 echo "<h1>日历作业</h1>";
-$month = $_GET['month'];
+if(isset($_GET['month'])){
+  $month = $_GET['month'];
+}
 
     // 只需要知道年月就可以了
 //     $month = '';
