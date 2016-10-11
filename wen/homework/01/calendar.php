@@ -51,7 +51,7 @@ class Calendar
         if ($this->nextMonth > 12) {
             $this->nextMonth = 1;
             $this->rightYear = $this->nowYear + 1;
-        }else{
+        } else {
             $this->rightYear = $this->nowYear;
         }
 
