@@ -41,10 +41,10 @@ class Calendar
         $this->nextMonth = $this->nowMonth + 1;
 
         // 月份回归
-        if($this->lastMonth < 1){
+        if ($this->lastMonth < 1) {
             $this->lastMonth = 12;
             $this->leftYear = $this->nowYear - 1;
-        }else{
+        } else {
             $this->leftYear = $this->nowYear;
         }
         // 月份回归
